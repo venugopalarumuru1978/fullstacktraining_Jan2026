@@ -1,0 +1,54 @@
+Today's Agenda
+--------------
+HTML Forms:- 
+
+Form is a Web Page for taking input. 
+As per the html, there are different tools to provide input,
+
+TextBox
+PasswordBox
+Buttons(button, submit, reset)
+RadioButton
+CheckBox
+Dropdownlist
+Textbox with multiline
+Calender Tools(date / datetime / time /...)
+
+textbox :-  is used to provide single line of text. 
+	<input type="text" name/id="name of tool" value="default value" ....... />
+
+password box :- is used to provide text with invisiable chars
+	<input type="password" name/id="name of tool" value="default value" ....... />
+
+Buttons :-  These tools are used to specify particular task execution from either client side / server side. 
+			As per html, there are 3 types of buttons
+		button :-  used to execute only script code in client side.
+		submit :-  used to submit page to the server and execute code in server side. 
+		reset :-   used to refresh page. 
+
+		<input type="button/submit/reset"  value="button name"  .... />
+
+Radiobutton :-  is used to select any one option/button from group of buttons. 
+			<input type="radio"  name="groupname"   value="val.." ... />Visiable Text
+
+		note :-  One Group of radio buttons name must be same.
+
+Checkbox :-   is used to select multiple options from group of options. 
+		<input type="checkbox"  name="tool name"   value="val.." ... />Visiable Text
+
+textbox with multiline :-  is used to create textbox with multiple lines. 
+		<textarea  name="name of tool"  cols="no of chars"  rows="no of lines ...>
+				.....
+		</textarea>
+Dropdownlist :-  is used to select any option from group of options, here all options are in hidden mode.
+			
+			<select name="name of tool"  ....>
+				<option value="val...">text</option>
+				<option value="val...">text</option>
+				<option value="val...">text</option>
+			</select>
+
+for email :-   <input type="email" ..... />
+for calender :-  <input type="date" .... />
+for website :-  <input type="url" .... />
+for phonenumber :-  <input type="tel" .... />

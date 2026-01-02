@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            background-image: url('bg1.png');
+            background-position:initial;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            border: solid;
+            border-radius: 10px;
+            height: 100px;            
+        }
+
+        .textbox{
+            background-color: chocolate;
+            color:whitesmoke;
+            font-weight: bold;
+            width:200px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .buttoncss
+        {
+            width: 150px;
+            height: 30px;
+            background-color: green;
+            color:white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">HTML Forms</h1>
+    <hr />
+    <table>
+        <tr>
+            <td width="40%" style="text-align: right;">
+                <label style="font-weight: bold;color:rgb(104, 61, 6)">Username</label>
+            </td>
+            <td width="60%">
+                <input type="text" name="txtUser" class="textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td width="40%" style="text-align: right;">
+                <label style="font-weight: bold;color:rgb(80, 48, 6)">Password</label></td>
+            <td width="60%">
+                <input type="password" name="txtPass" class="textbox" />
+            </td>
+        </tr>
+
+        <tr>
+            <td width="100%" style="text-align: center;" colspan="2">
+                <input type="button"  value="Click Me" class="buttoncss" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset"  value="Clear Form" class="buttoncss" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

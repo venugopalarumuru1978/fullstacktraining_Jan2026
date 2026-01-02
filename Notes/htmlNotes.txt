@@ -1,0 +1,92 @@
+Web Programming :-
+------------------
+1.  Markup Languages
+	HTML, DHTML(CSS), XML, XHTML, XAML, ....
+2.  Scripting Languages
+	JavaScript, TypeScript, jQuery, ES6/7, ...
+		based on Script lang, frontend web programming langs are evaluted
+			Anuglar, React JS, Node JS, Express JS, Vue JS, ....
+3. Web Technologies (Programming Langs)
+	Java - Servlets / Jsp/ Spring Boot/ ....
+	DotNet - Asp.Net / MVC / Asp.net Core /....
+	Python - Django
+
+4. Designing Tools (Web Designers)
+	Photoshop, Dream Viewer, WordPress, ...
+--------------------------
+HTML, CSS, JS, Java WebTech
+HTML, CSS, JS, Dotnet WebTech
+HTML, CSS, JS, python WebTech
+-------------------------
+Programming Languages Common Concepts:- 
+	1. Variables, keywords, Constants, ...
+	2. Input / Output Statements
+	3. Control Statements (If, Loops, Switch)
+	4. Arrays and Strings
+	5. Functions
+---------------------------------------
+What is HTML?
+	Full Form :-  HyperText Markup language
+
+	html is used to create and design web pages. 
+
+if we wants work with html, css and js, we don't need any specific software installation, just need browser. 
+Coding can be written in any text editor(notepad, ....) but we use a third part tool called VSCode. 
+
+Steps for HTML using VSCode:- 
+
+1.  Open VSCode
+2.  Create a new file then save that file with ".html" extension
+3.  Code the program as per the requirement
+4.  Execute program with browser.
+
+-------------
+html consist different types of commands which are called as tags.
+
+every tag has the following syntax
+		<tagname ....>Action</tagname>
+
+As per html there are two types of tags
+	1. Container Tags :-   it is having begining and ending tags
+				<tagname ....>Action</tagname>
+	2. Non-Container Tags :-  it is having only begining
+				<tagname  ....... />
+Structure :- 
+
+	<html>
+		<head>
+			<title>title of the page</title>
+			<meta .... />
+			<style .... />
+			<script .... />
+		</head>
+	
+		<body>
+			Actual web page code
+		</body>
+	</html>
+----------------------
+Tags :- 
+
+<u>Underline</u>
+<i>Italic</i>
+<b>Bold</b>
+<pre>Pre-formated Data</pre>
+<sup>Super Script</sup>
+<sub>Sub Script</sub>
+<img src="file name with path"  height="%age / pixels"  width="%age / pixels"  alt="missing text" />
+		to load an image. 
+
+1000 pixels = 100%
+
+
+
+
+
+
+
+
+
+
+
+

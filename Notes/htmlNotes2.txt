@@ -1,0 +1,54 @@
+table tag:- 
+---------
+data can be presented in the form of table. 
+
+<table  width="%age"  border="1/0">
+
+<tr>  // table row
+	<th>Col Heading-1</th>  // table head
+	<th>Col Heading-2</th>
+	................
+	<th>Col Heading-n</th>
+</tr>
+<tr>
+	<td>Col Data Val-1</td> // table data
+	<td>Col Data Val-2</td>
+	...................
+	<td>Col Data Val-n</td>
+</tr>
+
+</table>
+
+colspan :-  it is used to merge multiple cols as one col.
+rowspan :-  it is used to merge multiple rows as one row.
+---------------------------------------
+List Tags:- 
+
+These tags are used to present textual info in point by point. these are divided into 3 types
+
+1. Ordered List		:-  info in the form numbers/roman letters / alphabets
+			<ol  type="1/A/a/I/i">
+				<li>Point-1</li>
+				<li>Point-2</li>
+				.........
+				<li>Point-n</li>
+			</ol>
+
+2. Unordered List	:- info in the form of symbols
+			<ul  type="circle/dot/square">
+				<li>Point-1</li>
+				<li>Point-2</li>
+				.........
+				<li>Point-n</li>	
+			</ul>
+3. Definition List :-  here it is heading and it's definition has to defined
+
+		<dl>
+			<dt>heading</dt>
+			<dd>defintion</dd>
+		</dl>
+
+Nested List :-  A list within another list. 
+-------------------------
+Anchor Tag:-   It is used to create hyperlink b/w pages. 
+		<a href="Page name" target="_blank/...">Link Text /Image</a>
