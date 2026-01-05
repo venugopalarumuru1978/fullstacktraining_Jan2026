@@ -1,0 +1,40 @@
+Today's Agenda
+---------------
+CSS Basics
+---------------
+
+CSS :-  Cascading Style Sheets
+
+it is meant for beautify the web page. 
+
+css can be applied on web page in 3 ways
+		
+1.  Inline CSS 		:- here css can be applied for tag separately. 
+					<tag   style="propname:value;propname:value;...." />
+2.  Page Level CSS :-   here css can be defined in the form of classes. 
+				these css can placed in <style> tag which is a nested tag of <head>.
+			
+	these can be written in 3 ways.
+		1. defining css for tags directly, those css applies to the tags directly. 
+				tagname{
+					propname:value;propname:value;
+				}
+		2. define css classes with .operator as follows
+				.css_classname{
+					propname:value;....
+				}
+			once it is defined, it has to be attached to the tag, as follows
+				<tag  class="css_classname"  ... />
+
+		3. define css classes with # operator as follows
+				#css_classname{
+					propname:value;....
+				}
+			once it is defined, it has to be attached to the tag, as follows
+				<tag  id="css_classname"  ... />
+3.  Site Level CSS :-  here all css can be defined into separate css file and that can be imported into html file.
+
+			A. Create a new file and save with .css extension
+			B. Define all css classes as per the requirement
+			C. Link css file as follows in html page(<head>)
+			<link rel='stylesheet' type='text/css' media='screen' href='css file name'>

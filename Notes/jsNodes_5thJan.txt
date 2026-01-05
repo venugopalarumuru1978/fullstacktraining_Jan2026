@@ -1,0 +1,96 @@
+Today's Agenda
+--------------
+JavaScript
+--------------
+Script :-  Programming with Web Page is called Script. 
+
+1. Data Types & Variables
+2. Control Statements (If, Switch, Loops)
+3. Arrays & Strings
+4. Functions
+
+there are different script langauges
+
+1. VBScript - Which works on Only IE Browser. 
+2. JavaScript - Browser Independent Script.
+3. jQuery - Simplified Version JavaScript. 
+4. TypeScript - Add on features of the JS(OOPS).
+5. ES 6/7 :-  Add on Features of the JS.
+
+Script Based Web Programming Langauges
+1. Angular	-  JS + TypeScript
+2. React JS     - JS + ES 6/7
+3. Node JS	- JS + ES 6/7
+4. Express JS 	- JS + ES 6/7
+5. Vue JS	- JS + ES 6/7
+
+JavaScript :-  It is a Loosely typed programming langauge which meant for creating dynamic web pages.
+			Purpose :- 
+				1. Adding Client Side Functionality of the web page
+				2. Input Validations
+				3. Data Manipulations(Presenting data in different ways)
+
+To write a javascript in html page just add following tag in <body> at the ending point. 
+
+<body>
+... desgining....
+<script type="text/javascript">
+		java script code
+</script>
+</body>
+
+if we want js code separately, we have to follow below given steps
+
+1. Install Node JS(NPM - Node Package Manager) software.
+2. Open VSCode  then write the JS code as per the required.
+3. Save that file with .js extension
+4. Goto Command Prompt, then use following command to get output
+		c:\>node filename.js
+----------------------------------------
+DOM :-   Document Object Model :-  It is a Structure of the web page where it allows to perform different operations web page. 
+
+to perform these operations, "document" object will be provided. here document means presently working web page. 
+
+it has set of methods
+
+write() :-  it allows to print something on web page.
+
+console :-  it is also one of the object which represents command prompt of the web page. 
+
+log() :-  it prints something on command prompt. 
+-------------------------------
+Variable :- It is a named memory location to store values temply. 
+As per javascript, there is 3 keywords to declare variables:-  let, var, const
+
+let :-  to declare local variables
+var :-  to declare local as well as global variables
+const :- to declare constant variables.
+
+Data Types classifies data into different types, as JS
+number - refers both integer and decimal values
+string - refers text
+bool - refers only (true/false)
+any -  refers any type of data. 
+
+Note :- Once variable is declared with value, automatically data type will be assigned to that variable implicitly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
