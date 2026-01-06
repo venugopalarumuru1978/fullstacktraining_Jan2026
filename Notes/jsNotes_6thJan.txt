@@ -1,0 +1,112 @@
+Today's Agenda
+--------------
+JS Operators :- 
+--------------
+Arithematic Operators
+		+, -, /, *, %
+Relational Operators
+		>, < >=,<=, !=, ==, ===
+
+		==  :-  it is equal operator where it check weather two values are same or not. 
+		=== :-  it is also equals operator where it checks value and it's data both must be same. 
+Logical Operators
+		&& - AND
+		|| - OR
+		!  - NOT
+Unary Operators
+		++  - increment by 1
+		--  - decrement by 1
+Assignment Operators
+		=
+		+=, -=, /=, *=, %=
+
+Conditional Operators 
+		? :
+		<condition> ? <true> : <false>
+---------------------------------------------
+Control Statements :- 
+
+if statement :- it is used to check conditions, based on condition true / false some statements will be executed. 
+	Simple IF
+		if(condition)
+		{
+			set of stmts
+		}
+
+if - else 
+		if(condition)
+		{
+			set of stmts
+		}
+		else
+		{
+			set of stmts
+		}
+
+else - if
+		if(cond-1)
+		{
+			set of stmts
+		}
+		else if(cond-2)
+		{
+			set of stmts
+		}
+		..............
+		..............
+		else if(cond-n)
+		{
+			set of stmts
+		}
+------------------------
+Loops :-  the process of repeating task for n number of times. 
+
+variable initilization
+looping condition
+looping task
+looping termination stmts
+
+while loop
+
+		variable initilization
+		while(condition)
+		{
+			set of stmts
+			increment / decrement operations
+		}
+
+print ur name 10 times
+
+	let x = 1;
+	while(x<=10)
+	{
+		console.log("Venugopal");
+		x++;
+	}
+for loop
+		for(initilization;condition;iteration)
+		{
+			set of stmts
+		}
+---------------------
+User Defined Functions:- the function created and managed by user is called user defined function. 
+
+function definition:- 
+-----------------------
+function <fun_name>([arg])
+{
+	body of the function
+}
+
+function calling:- 	fun_name([arg values]);
+
+A function can be defined into 4 ways
+
+1.  without arguments and without return value
+2.  with arguments and without return value
+3.  with arguments and with return value
+4.  without arguments and with return value
+
+	Arguments are the values passing to the function at the time of calling. A fun can take any no of arugments.
+	Return value is a value which return final result to the calling function. 
+ 
