@@ -1,0 +1,40 @@
+Today's Agenda
+--------------
+Html Forms and JavaScript
+--------------
+
+GUI Programming, Event Handling one concept has to discuss
+
+
+HTML Forms :-  textbox, button, radiobutton, checkbox,....
+
+Some Generalized Events
+
+click 		=  onclick
+doubleclick	=  ondblclick
+change		=  onchange
+draganddrop	= ondrag
+mouseclick	= onmouseclick
+keypress	= onkeypress
+----------------------------
+Whenever html page having inputs, those all input elements/tags has to enclose within the <form> tag. 
+
+<form  name="..."  method="POST/GET"  action="pagename" .....>
+	input tags
+</form>
+
+We can access / set values to the html elements which is provided in <form> tag as follows
+		"formname.elementname.value"
+
+We can also access / set values to the html elements with "ID" prop by following statement
+		document.getElementById("id val")
+	the above sttement having following props
+
+	innerText  = assign value without html format 
+	innerHTML  = assign value with html format
+	value =  to get / set value for html forms
+--------------------
+convertion functions:- 
+-----------------
+parseInt()   :- it is used to convert string oriented integer value into integer type.
+parseFloat() :- it is used to convert string oriented float value into float type.

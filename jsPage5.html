@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form name="frmRadio">
+        <p style="text-align: center;">
+            <label>Bank Payment Options</label><br />
+            <input type="radio"  name="rdoBank"  value="DC" onchange="DemoRadio()" /><label>Debit Card</label>
+            <input type="radio"  name="rdoBank"  value="CC" onchange="DemoRadio()" /><label>Credit Card</label>
+            <input type="radio"  name="rdoBank"  value="NB" onchange="DemoRadio()" /><label>Net Banking</label>
+        </p>   
+    </form>
+    <h2 style="text-align: center;" id="resinfo"></h2>
+    <script type="text/javascript">
+        function DemoRadio()
+        {
+            let bankVal = frmRadio.rdoBank.value;
+            //alert(bankVal);
+            if(bankVal=="DC")
+                document.getElementById("resinfo").innerHTML = "Ur Payment option is Debit Card";
+            if(bankVal=="CC")
+                document.getElementById("resinfo").innerHTML = "Ur Payment option is Credit Card";
+            if(bankVal=="NB")
+                document.getElementById("resinfo").innerHTML = "Ur Payment option is Net Banking";
+        }
+    </script>
+</body>
+</html>
