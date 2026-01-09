@@ -1,0 +1,18 @@
+Form Submition:- 
+----------------
+the process of submiting page to the server along with given inputs is called as form submition. 
+it has to be done with <form> tag along with "submit" button
+
+<form name="----"   method="GET/POST"  action="Pagename">
+	....................
+	<input type="submit"  value=".... " />
+</form>
+
+4 types of request methods 
+
+GET 	:-  Something getting from server
+POST	:-  Something need to be send to the server from client
+PUT	:-  for Modification
+DELETE  :-  for deletion 
+
+action :-  this attribute performs an action when page submit to the server. 

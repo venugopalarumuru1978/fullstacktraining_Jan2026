@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">HTML Forms</h1>
+    <hr />
+    <table width="30%" border="1">
+        <tr>
+            <td width="40%" style="text-align: right;">Username</td>
+            <td width="60%">
+                <input type="text" name="txtUser" />
+            </td>
+        </tr>
+        <tr>
+            <td width="40%" style="text-align: right;">Password</td>
+            <td width="60%">
+                <input type="password" name="txtPass" />
+            </td>
+        </tr>
+
+        <tr>
+            <td width="100%" style="text-align: center;" colspan="2">
+                <input type="button"  value="Click Me" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset"  value="Clear Form" />
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <h3 style="text-align: center;">Registration Form</h3>
+    <hr />
+    <table width="50%" border="1">
+        <tr>
+            <td style="text-align: right;" width="50%">Person Name : </td>
+            <td width="50%">
+                <input type="text"  name="txtPname" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">Gender : </td>
+            <td>
+                <input type="radio"  name="rdoGender" value="Male" />
+                <label>Male</label>
+
+                <input type="radio"  name="rdoGender" value="Female" />
+                <label>Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">Hobbies : </td>
+            <td>
+                <input type="checkbox"  name="chk1"  value="reading" />
+                <label>Reading Books</label>
+
+                <input type="checkbox"  name="chk2"  value="chess" />
+                <label>Playing Chess</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;" width="50%">Date of Birth : </td>
+            <td width="50%">
+                <input type="date"  name="txtBdate" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;" >Address : </td>
+            <td>
+                <textarea name="txtAdrs"  cols="50" rows="5"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;" >Location</td>
+            <td>
+                <select name="ddlLoc">
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Amaravathi">Amaravathi</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nellore">Nellore</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: right;" width="50%">Pincode : </td>
+            <td width="50%">
+                <input type="number"  name="txtPin" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right;" width="50%">Phone Number : </td>
+            <td width="50%">
+                <input type="tel"  name="txtPh" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;" width="50%">Email : </td>
+            <td width="50%">
+                <input type="email"  name="txtEmail" />
+            </td>
+        </tr>
+
+        <tr>
+            <td width="100%" style="text-align: center;" colspan="2">
+                <input type="button"  value="Register" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset"  value="Clear Form" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
