@@ -1,0 +1,88 @@
+Today's Agenda
+--------------
+React JS Introduction
+==============
+What is a React JS?
+
+React JS -React is an open-source component-based front-end JavaScript library. 
+
+Purpose of React:-
+1. It is used to create fast and interactive user interfaces(UI) for web and mobile applications.
+
+	React JS / React = Web App
+	React  Native = Mobile App
+
+2. It is easy to create a dynamic application in React because it requires less coding and offer more functionality.
+ 
+3. By using React, We can create Single Page Applications(SPA).
+
+Why React:-
+Today, many JavaScript frameworks are available in the market(like angular, node), but still, React came into the market and gained popularity amongst them. 
+
+The previous frameworks follow the traditional data flow structure, which uses the DOM (Document Object Model).
+
+DOM is an object which is created by the browser each time a web page is loaded.
+ 
+It dynamically adds or removes the data at the back end and when any modifications were done, then each time a new DOM is created for the same page.
+
+This repeated creation of DOM makes unnecessary memory wastage and reduces the performance of the application.
+
+Therefore, a new technology ReactJS framework invented which remove this drawback. ReactJS allows you to divide your entire application into various components. 
+
+ReactJS still used the same traditional data flow, but it is not directly operating on the browser's Document Object Model (DOM) immediately; instead, it operates on a Virtual DOM. 
+
+It means rather than manipulating the document in a browser after changes to our data, it resolves changes on a DOM built and run entirely in memory. After the virtual DOM has been updated.
+
+React determines what changes made to the actual browser's DOM. The React Virtual DOM exists entirely in memory and is a representation of the web browser's DOM. Due to this, when we write a React component, we did not write directly to the DOM; instead, we are writing virtual components that react will turn into /the DOM.
+
+There are couple of front end languages
+1. Angular
+2. React JS
+3. View JS
+4. Express JS
+5. Node JS
+
+With these languages, we can create Single Page Applications.
+
+Advantages :-  
+
+1. Performance will be improved. 
+2. Virtual DOM provided, with this page content will be loaded very fastly. 
+
+
+What is Virtual DOM?
+	React JS Virtual DOM is an in-memory representation of the DOM. DOM refers to the Document Object Model that represents the content of HTML documents as a tree structure so that the programs can be read, accessed and changed in the document structure, style, and content.
+--------------------------------------------
+How to Install  React JS:- 
+
+1.  Install NPM(Node Package Manager), it will come with NodeJS Software.
+	so that first we have to install Nodejs
+		Open nodejs.org  site then download software then install it. 
+
+Note :- Once  Installation is done, check the versions by using following commands At command prompts
+		node -v (to check node js version)
+		npm -v (to check npm version)
+
+What is a NPM?
+		It is a Node Package Manager, which is world largest library for differnt front end web scripts. 
+			it has over 8 Lakkhs librarys. 
+				It provides library for all the front end langauges as well as it gives set of 
+				commands to work with that particular languages. 
+
+2. Now install react js by following command. 
+	npm install -g create-react-app
+
+note :-  To check the version		
+		npm view react version
+----------------------------------------
+How to create  React Application, Use following command to create app
+		
+		create-react-app <app name>
+
+	Note :-  app name must be in small case letters
+
+		Ex:-   create-react-app  myfirstreactapp
+
+To Run the application 
+		npm start
+--------------------------------------------
