@@ -1,0 +1,148 @@
+Today's Agenda
+--------------
+React Components
+React CSS
+React Images
+-----------------
+What is a Component?
+	It is a building block of the react where it consist some functionality of the application. 
+	this functionality includes designing(HTML & CSS) and actions(Script).
+				or
+	A component is a react page.
+
+	As per the React, Components are two types
+	1.  Functional Components
+	2.  Class Components
+-----------------
+1.  Functional Components
+		these components are created with script function, Every Component need a separate file having an 
+		extension .js (or) .jsx
+
+			function <fun_name>([arg])
+			{
+					[Script logic] 	
+				return(
+					<div>
+						html design
+					</div>
+					);
+			}
+
+			export default <function_name>;
+
+Steps :-  
+	a. Create  .js file file in src folder
+	b. Create  function with some functionality
+	c. Call this js file in to <App /> Component as a tag <fun_name />
+
+2.  Class Components
+	these components are create with class and it should be inherited React.Component
+
+			class <classname> extends React.Component
+			{
+				logic part
+			
+				render(){
+					return(
+						<div>
+							html design
+						</div>
+					);
+				}
+			}
+		
+Note:- Latest Versions of React(React 16 and above) won't used class component. Because these component won't support 
+Hooks Concepts.
+------------
+React CSS :- 
+		1. Create CSS file in Src folder then define all css required.
+		2. import that css file in any component 
+			import './css filename'
+		3. Apply css class with following attribute
+			<tagname className="css classname">Action</tagname>
+
+Note:- for Inline CSS
+		<h1 style={{color:"red",backgroundColor:"yellow"}}>Hello Text</h1>
+--------------------
+React Images
+		1. Copy all required images and paste it in Public Folder
+		2. Use images with <img> tag as html
+<img src="slide-4.jpg" width="100%" height="250px" alt="Not Found" />
+-----------------
+Arrow Functions:-
+
+const  Functionname = ([arg1, arg2, ...]) =>{
+	body of the method
+}
+
+function  <fun_name>([arg1, arg2,....])
+{
+
+}
+---------------
+Array/List :- 
+
+Array, 
+	variable=[val, val2, val3,....]
+List :
+	variable = [
+	{key:value, key:value, ....},
+	{key:value, key:value, ....},
+	...................	
+]
+
+map() Function :-  it is used to fetch / read values from a list/an array. It works like loop. 
+
+ListObj.map((localVar)=>(
+	{localVar.key}, ......
+))
+
+lstObj.map((lst)=>{
+print(lst)
+});
+
+
+
+----------------
+    const applicants = [ {
+        name: 'Joe', work: 'freelance-developer',
+        blogs: '54', websites: '32',
+        hackathons: '6', location: 'morocco', id: '0',
+      },
+      {
+        name: 'janet', work: 'fullstack-developer', 
+        blogs: '34', websites: '12', 
+        hackathons: '8', location: 'Mozambique', id: '1',
+      },
+    
+    ]
+    let cities = ["Hyd", "Bgl", "Amr", "Nlr", "VZG"];
+    
+    return (
+        <div>
+            <table width="100%" border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Built</th>
+                    <th>Location</th>
+                </tr>
+            
+{applicants.map((applicant) => (
+  <tr>
+    <td><span>{applicant.name}</span></td>
+    <td><span>{applicant.websites}</span></td>
+    <td><span>{applicant.location}</span></td>
+  </tr>
+
+))}
+</table>
+            <h3 className="head1">Hello Page2</h3>
+                {
+                    cities.map((c)=>
+                    <p>{c}</p>
+                    )
+                }
+            <Page3 />
+        </div>
+    );
+}
