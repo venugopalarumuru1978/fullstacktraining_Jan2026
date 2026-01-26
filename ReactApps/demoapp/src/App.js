@@ -13,7 +13,7 @@ function App() {
       <img src='slide-2.jpg'  height="200px" width="100%" alt='Not an Image' />
       <BrowserRouter>
       <Navbar />
-      <hr />      
+      <hr />
         <Routes>
           <Route path="/" exact Component={Home} />
           <Route path="/home" exact Component={Home} />

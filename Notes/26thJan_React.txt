@@ -1,0 +1,62 @@
+Today's Agenda
+---------------
+State and Props
+Forms
+---------------
+State and Props
+
+Here state and props both are predefined objects of the react.
+
+State :- 
+
+The state is an updated structure that is used to contain and can modify data or information about the component over time.
+
+The state change may occur as a user activity or device event response. 
+It decides the actions of the component and how it is to be done by the core of the React component. 
+
+useState() hook can be used to implement state concept. 
+---
+Props :- 
+“Props” is a special React keyword for proprietary purposes, used for data transmission from component to component. 
+
+Props are read-only.
+
+Steps :-  
+
+Create two components like parent and child. here data has to be transfered from parent to child. 
+
+1. Create a parent component, within that componnent call the child component with arguments as follows. 
+	<Child Component Name variable=value variable=value .... />
+2. Create a child component, while creating use "props" object as a  formal argument component function/method
+
+function ChildComp(props)
+{
+
+}
+3. Now get values from props objecet as follows in child component
+	props.variable  => will get value
+--------------------------
+...  :-  Spread Operator :-  it is used to concatenate two or more than two object values into single unit.
+
+let APcities = ["Amaravathi", "Vizag", "Nellore"]
+let TSCities = ["Hyderabad", "Warangal", "KarimNagar"]
+
+let cities = [...APCities, ...TSCities];
+--------------------------
+obj = {"sname":"Pavan", "age":20, "loc":"Hyd"};
+
+onChange={(e)=>{setStd({...std, sname:e.target.value})}} />
+
+
+
+
+
+----
+How to add bootstrap to the react application
+
+1. Install following package
+	npm install bootstrap
+
+2. Add following import statement in index.js file
+	import 'bootstrap/dist/css/bootstrap.min.css'; 
+-------------------
