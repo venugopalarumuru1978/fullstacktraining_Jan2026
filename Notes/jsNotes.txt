@@ -1,0 +1,49 @@
+How to write JS program in VSCode?
+
+1. Open VSCode
+2. Create a new File with extension .js
+3. Write the code as per the required
+4. Goto Terminal Menu - new - terminal click it
+5. Now write the following command
+	node  filename.js
+-----------------
+Output Statement :- This statement is used to print something on console prompt
+			console.log("Stmts"/variable)
+-----------------
+What is a Variable?
+	it is a named memory location to store values temp. 
+
+As per the JS,  variables can be declare with following keywords
+			var/let
+for constants :-  const
+
+	Syntax :- 
+		var/let <variable name> =  <value>;
+
+Data Types :-  Classification of Data.
+
+	As per JS, there are 4 types of data types	
+			1. Number  -  Only Numbers(Integers and Decimals)
+			2. String  -  Collection of Characters. (Character :- it is an alphabet / a digit / a symbol)
+						Venugopal  Arumuru
+						D. No. 121-A
+			3. Boolean -  There are only two values (True/False)
+			4. Any     -  Any type of value can be stored. 
+
+These data types are not using explicitly, only implicitly and automatically takes the data type based on value assigned to the variable.
+
+Important Points :- 
+
+1. NaN stands for "Not a Number", It is a special value that represents the result of an invalid or an unrepresentable mathematical operation. It is of the Number data type, despite its name, and is a global property that can also be accessed as Number.NaN.
+
+2. undefined :-  It gives as value when you are not  providing initial value for a variable. 
+-------------------------------------
+parseInt() :-  this method is used to convert string orinted integer value into integer.
+
+parseFloat() :-  this method is used to convert string orinted decimal value into decimal.
+------------------------------
+
+
+         Control Statements
+
+

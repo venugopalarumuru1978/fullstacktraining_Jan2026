@@ -1,0 +1,23 @@
+Today's Agenda
+--------------
+Request Types
+Form Submit
+--------------
+
+Request :-  the information which we send to the server is called request. 
+Response :-  the information which we recieve from the server is called response. 
+
+There four types of Request methods
+
+POST  :-  New Regsitration(saving new data into the server)
+GET   :-  Retrive / Get Data from Server.
+PUT   :-  Modify existing data into the server.
+DELETE :- Remove existing data into the server.
+
+Form Submit :-  the process of submiting web page to the server along with data. 
+to do this process, follow below given steps
+
+<form name="name of form"  method="POST/GET/PUT/DELETE"  action="Page Name">
+		form design
+	<input type="submit"  value="name of button" .... />
+</form>

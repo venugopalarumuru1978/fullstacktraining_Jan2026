@@ -1,0 +1,27 @@
+Today's Agenda
+--------------
+How to intigrate  JS with HTML Page?
+
+1. Design HTML Forms Page.
+2. Define javascript code  in <script> tag
+3. Link that JS Code function to the related Tools(buttons, ....) for an execution. 
+------------------
+HTML Form Tag :-  <form></form>
+
+All the html form tags(textbox, radiobutton, checkbox, ...) must be enclosed within the <form> tag to get / set values. 
+
+<form  name="name of form"  method="GET/POST"  action="pagename" ...>
+	html coding
+</form>
+
+whenever tools are in form tag, to get / set values into input tools
+		"formname.toolname.value"
+--------------------
+document :-  it is an javascript object which represent currently working web page. it is used to access html elements(tags) into javascript. it has different predefined methods. 
+
+getElementById("idprop") :-  this method is used to identify html tag with id prop.
+it has two props
+
+innerText :-  It allows to set only text formated result
+innerHTML :-  It allows to set text format with html tags. 
+------------------

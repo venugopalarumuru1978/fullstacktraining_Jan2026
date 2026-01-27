@@ -3,46 +3,28 @@ import './App.css';
 import Test1 from './Test1';
 import SampleForm from './SampleForm';
 import SampleJsonForm from './SampleJsonForm';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavBar from './NavBar';
+import Sample from './Sample';
+import Login from './Login';
+import Welcome from './Welcome';
 
 function App() {
-    const [x, setX] = useState(10);
-    const [str, setStr] = useState('Lavanya');
 
-    let loc = "Amaravathi";
 
-    const increment = ()=>{
-      setX(x+1);
-    }
-
-    const decrement = ()=>{
-      setX(x-1);
-    }
   return (
-    <div className="App">
-      <table width="100%" border={1}>
-        <tr>
-          <td>
-          <h1>State Object</h1>
-      <h2>X value is : {x}</h2>
-      <input type='button'  value="Increment" onClick={increment} />
-      <input type='button'  value="Decrement" onClick={decrement} />
-      <h2>Name of Person : {str}</h2>
-      <input type='button'  value="Change Name" onClick={()=>{setStr('Varun Kumar')}} />
-          </td>
-          <td>
-          <Test1 sname="Praveen" age="30" location={loc} />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <SampleForm />
-          </td>
-          <td>
-            <SampleJsonForm />
-          </td>
-        </tr>
-      </table>
-      <hr />
+    <div>
+
+<BrowserRouter>
+      <NavBar />
+      <Routes>        
+        <Route path="/pg1" exact Component={SampleForm} />
+        <Route path="/pg2" exact Component={SampleJsonForm} />
+        <Route path="/pg3" exact Component={Sample} />
+        <Route path="/login" exact Component={Login} />
+        <Route path="/welcome" exact Component={Welcome} />
+      </Routes>
+</BrowserRouter>
       
     </div>
   );

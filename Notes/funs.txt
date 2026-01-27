@@ -1,0 +1,45 @@
+Today's Agenda
+--------------
+User Defined Functions
+--------------
+User Defined Functions :- 
+		the functions created by the user as per the requirement is called udf. 
+
+		purpose :-  To divide big task into small no of tasks to avoid complexity.
+
+
+To create a function,  
+
+1.  Function definition
+2.  Function calling
+
+
+Function definition :-  creating new function with specific task. 
+
+		function  <fun_name([arg])
+		{
+			.............
+			body of the function
+			.............
+
+			[return <expression>]
+		}
+
+Function calling :-  Execution process of the function.
+
+			<fun_name>([arg values]);
+
+A function can be defined into 4 ways
+
+1.   Without arguments and without return value
+2.   With arguments and without return value
+3.   With arguments and with return value
+4.   Without arguments and with return value
+
+Aruguments / parameters are the values sending to the function while calling. A function can take any no of arguments. 
+
+return value is a value which return after completion of task. It can return only one value. 
+
+
+
+					sqrt(49)  =  7 

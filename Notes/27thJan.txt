@@ -1,0 +1,36 @@
+Today's Agenda
+-------------
+1. Bootstrap
+2. Hooks
+3. Json-Server
+-------------
+How to add bootstrap to the react application
+
+1. Install following package
+	npm install bootstrap
+
+2. Add following import statement in index.js file
+	import 'bootstrap/dist/css/bootstrap.min.css'; 
+-------------------
+React Hooks
+Hooks are the functions which "hook into" React state and lifecycle features from functional components.
+Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other React features without writing a class. It does not work inside classes(Hooks won't work in class components).
+
+Note:-  Hooks should not use inside any other function. 
+
+useState() :-  it is used to manage state of the variable / object. 
+useNavigate() :- by using this hook, we can forward to any othe componenet.
+
+useEffect() :-  it is used to call the restapi and assigns result to any component or state.
+		it will get executed whenever component is loading/executing. 
+
+useEffect(() => {
+  // Side effect code
+  return () => {
+    // Cleanup function (optional)
+  };
+}, [dependencies]);
+
+useRef() :-  to set value to any tool in forms(textbox, radiobutton, ...)
+useParam() :-  to get value from url parameters.
+-------------------------

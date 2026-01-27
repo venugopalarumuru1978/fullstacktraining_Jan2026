@@ -1,0 +1,11 @@
+Today's Agenda
+---------------
+How to import js files into html
+
+1. Create an html file and design it as per the required. 
+2. Create a .js file then define user defined functions as per the functionality. 
+3. Now import .js file into html file as follows in <head> tag. 
+	<script  src="js file name"></script>
+
+
+

@@ -17,11 +17,21 @@ function SampleJsonForm()
         res = res + "<br />Location : " + std.location;
         setStdres(res);
     }
+
+
     return(
         <div>
-            <label>Student Name </label>
-            <br />
-            <input type="text"  name="txtSname" 
+            <div className="row">
+                <div className="col-md-2"></div>
+                <div className="col-md-8">
+                    <div className="card">
+                        <div className="card-header">
+                            <b>Sample JSON Form</b>
+                        </div>
+                        <div className="card-body">
+                        <label>Student Name </label>
+            
+            <input type="text"  name="txtSname" className="form-control"
             onChange={(e)=>{setStd({...std, sname:e.target.value})}} />
             <br />
             <label>Gender</label><br />
@@ -32,17 +42,22 @@ function SampleJsonForm()
             <input type="radio"  name="rdoGender"  value="Female"
             onChange={(e)=>{setStd({...std, gender:e.target.value})}} />
             <label>Female</label>
-            <br />
-            <label>Location</label><br />
-            <select name="ddlCity" onChange={(e)=>{setStd({...std, location:e.target.value})}}>
+            <br /><br />
+            <label>Location</label>
+            <select name="ddlCity" className="form-select" onChange={(e)=>{setStd({...std, location:e.target.value})}}>
                 <option value="Hyderabad">Hyderabad</option>
                 <option value="Amaravathi">Amaravathi</option>
                 <option value="Bangalore">Bangalore</option>
             </select>
             <br />
-            <input type="button" value="Click me" onClick={getInfo} />
+            <input type="button" value="Click me" className="btn btn-primary" onClick={getInfo} />
             <br />
             <p>{stdres}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-2"></div>
+            </div>
         </div>
     );
 }

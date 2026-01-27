@@ -1,0 +1,54 @@
+if statement:- 
+
+it is used to check conditions, based on condiiton true /false some statements will be executed.
+
+
+if statements are 4types
+
+simple if:-
+
+if(condition)
+{
+	set of stmts
+}
+
+if-else
+
+if(condition)
+{
+	set of stmts
+}
+else
+{
+	set of stmts
+}
+
+else if 
+
+if(cond-1)
+{
+	set of stmts
+}
+else if(cond-2)
+{
+	set of stmts
+}
+.............
+.............
+======================================
+Loops 
+
+While loop
+		variable inital value
+		while(condition)
+		{
+			set of stmts
+			increment / decrement operations
+		}
+
+For Loop
+
+	for(initial value;condition;iteration)
+	{
+		set of stmts
+	}

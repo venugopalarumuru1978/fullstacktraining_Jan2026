@@ -1,0 +1,58 @@
+
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+function Login()
+{
+    //const [uname, setUname] = useState('');
+    //const [pswd, setPswd] = useState('');   
+    const uname = useRef('');
+    const pswd = useRef('');
+
+    const [result, setRes] = useState('');
+    const navigate = useNavigate();
+
+
+    useEffect(()=>{
+
+    }, []);
+
+
+    const LoginCheck = () =>{
+        console.log(uname.current.value + "  " + pswd.current.value);
+        if(uname.current.value  =="Venugopal" && pswd.current.value =="v@123")
+            //setRes("User Details are Correct");
+            navigate('/welcome');
+        else
+        setRes("User Details are Incorrect");
+    }
+
+    return(
+        <div>
+            <div className="row">
+                <div className="col-md-3"></div>
+                <div className="col-md-6">
+                    <div className="card">
+                        <div className="card-header">
+                            <b>Login Form</b>
+                        </div>
+                        <div className="card-body">
+                            <form>
+                                <label>Username</label>
+                                <input type="text"  name="txtUname" className="form-control" ref={uname} />
+                                <label>Password</label>
+                                <input type="password"  name="txtPass" className="form-control" ref={pswd} />
+                                <br />
+                                <input type="button"  value="Click Me" className="btn btn-primary" onClick={LoginCheck} />
+                            </form>
+                            <h2>{result}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-3"></div>
+            </div>
+        </div>
+    );
+}
+
+export default Login;
