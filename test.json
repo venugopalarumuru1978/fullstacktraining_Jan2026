@@ -1,0 +1,36 @@
+{
+  "Student": [
+    {
+      "id": "101",
+      "sname": "Pavan",
+      "course": "Java",
+      "fees": 25000
+    },
+    {
+      "id": "103",
+      "sname": "Ramana Rao",
+      "course": "Python",
+      "fees": 30000
+    },
+    {
+      "id": "104",
+      "sname": "Kamal Hasan",
+      "course": "Java",
+      "fees": 25000
+    }
+  ],
+  "Employee": [
+    {
+      "id": "11",
+      "ename": "Lavanya",
+      "job": "HR-Manager",
+      "salary": 30000
+    },
+    {
+      "id": "12",
+      "ename": "Sravanya",
+      "job": "Developer",
+      "salary": 20000
+    }
+  ]
+}

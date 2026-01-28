@@ -13,11 +13,6 @@ function Login()
     const navigate = useNavigate();
 
 
-    useEffect(()=>{
-
-    }, []);
-
-
     const LoginCheck = () =>{
         console.log(uname.current.value + "  " + pswd.current.value);
         if(uname.current.value  =="Venugopal" && pswd.current.value =="v@123")
