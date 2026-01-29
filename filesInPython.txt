@@ -1,0 +1,35 @@
+Working with Files:- 
+
+	File Open with Mode of File
+	File Operations
+	File Close
+
+How to Open a File
+	we have to use open() method. 
+
+	fileObj =  open("file name", "file mode")
+
+What is File Mode?
+	Purpose to open a file. 
+
+	Mode	Description
+	r	Open a file in reading mode (default)
+	w	Open a file in writing mode. Saving data into the file by creating new file.
+	x	Open a file for exclusive creation, it creats new file if not exist. if exist file, it throws an 			exception.
+	a	Open a file in appending mode (adds content at the end of the file)
+	t	Open a file in text mode (default)
+	b	Open a file in binary mode
+	w+	Open a file in both read and write mode
+	a+	Open a file in both read and append mode
+
+	fileObj = open("demo.txt", "w")
+
+File Operations :- 
+	there are several functions to perform operations on file.
+
+	write(string) :-  writing data into file.
+	read() :-  it allows to read complete data from file and stores into variable. 
+	close() :- it allows to close file. 
+	readLines() :-  it allows to read complete data from file line by line. 
+
+	 

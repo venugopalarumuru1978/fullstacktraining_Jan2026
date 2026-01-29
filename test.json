@@ -1,22 +1,16 @@
 {
   "Student": [
     {
-      "id": "101",
-      "sname": "Pavan",
+      "id": "121",
+      "sname": "Geetha Sahasra",
       "course": "Java",
-      "fees": 25000
+      "fees": "35000"
     },
     {
-      "id": "103",
-      "sname": "Ramana Rao",
-      "course": "Python",
-      "fees": 30000
-    },
-    {
-      "id": "104",
-      "sname": "Kamal Hasan",
+      "id": "123",
+      "sname": "Kiran Kumar",
       "course": "Java",
-      "fees": 25000
+      "fees": "25000"
     }
   ],
   "Employee": [
