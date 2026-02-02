@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function EmpReg()
 {
+    const navigate = useNavigate();
     const [formErrors, setFormErrors] = useState({});
+    const [msg, setMsg] = useState('');
     const [empinfo, setEmpInfo] = useState({
         "id": 0,
         "ename": "",
@@ -12,11 +16,22 @@ function EmpReg()
         "pswd":""
     });
 
+
     const getEmpInfo = (e) =>{
         e.preventDefault();
         if(Validations()===false)
         {
-            console.log(empinfo);
+            //console.log(empinfo);
+            axios.post("http://localhost:2345/Employee", empinfo)
+            .then((response) => {
+                console.log(response.data);
+                setMsg('Emp Added Successfully....');
+                navigate('/viewall');
+            })
+            .catch((err) => {
+                setMsg("Not Added.....");
+                console.log(err)
+            });
         }
     }
 
@@ -111,6 +126,7 @@ function EmpReg()
                     <p style={{"color":"red"}}>{formErrors.pwdlenErr}</p>
                     <br />
                     <input type="submit"  value="Regiser Emp" />
+                    <h2>{msg}</h2>
                 </form>
         </div>
     );
