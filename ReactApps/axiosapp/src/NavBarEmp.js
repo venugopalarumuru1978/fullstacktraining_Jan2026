@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar()
+function NavBarEmp()
 {
     return(
         <div>
             <p style={{textAlign:"center"}}>
-                <Link to="/viewall">All Employees</Link>
+                <Link to="/wemp">Home</Link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
-                <Link to="/empreg">Employee Register</Link>
+                <Link to="/cpwd">Change Password</Link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <Link to="/logout">Logout</Link>
             </p>
@@ -16,4 +16,4 @@ function NavBar()
     );
 }
 
-export default NavBar;
+export default NavBarEmp;

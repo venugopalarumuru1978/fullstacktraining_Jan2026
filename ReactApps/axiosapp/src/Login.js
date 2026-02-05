@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login()
+function Login(props)
 {
     const navigate = useNavigate();
     const [uname, setUname] = useState('');
@@ -17,9 +17,11 @@ function Login()
     }
 
     const LoginCheck = (e)=>{
+        
         e.preventDefault()
         if(uname==="Admin" && pswd==="admin@123")
         {
+            props.setLoginStatus('admin')
             navigate("/viewall");
         }
         else
@@ -34,6 +36,7 @@ function Login()
             {
                 if(empinfo[i].email===uname && empinfo[i].pswd === pswd)
                     {
+                        props.setLoginStatus('user')
                         empchk=true;
                         //navigate("/wemp");
                         getUrl(empinfo[i].id);
