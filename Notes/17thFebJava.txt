@@ -1,0 +1,37 @@
+Today's Agenda
+---------------
+OOPS
+---------------
+Once class is defined, Object Creation of the class has to done within the class when that class having
+main() method. 
+
+or 
+
+Create another class with main() method, within that class create an object then call method.
+
+Access Specifiers :- 
+--------------------
+private 	:-  it allows to access class members(variables & methods) within the class only. 
+public		:-  it allows to access class members inside and outside the class.
+protected	:-  it allows to access one class members into another class.
+
+Note :-  by default every class member is public. 
+---------------------
+Class members are classified into two types
+
+1.  Non-Static :-  these members are binded with class object. 
+			
+2.  Static	:-  these members are binded with class. 
+
+	A.  if class having all the static members(variables and methods), no need create object, just call methods
+		with class name only.
+	B.  static method can handle only static variables whereas non-static method can handle both static and non-		static data.
+----------------------
+Constructor :- it is a special method of the class which has same name of the class. 
+
+		purpose :-  to specify initial task of the object. i.e. to initialize instance variables at the time 		of object creation. 
+A.  It will call automatically whenever object is created. 
+B.  It can take parameters, for those parameters values has to pass at the time of object creation. 
+C.  A class can have multiple constructors, Each constructor should have different no of parameters. 
+
+
