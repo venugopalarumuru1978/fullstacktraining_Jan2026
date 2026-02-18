@@ -21,5 +21,4 @@ public class ConsApp {
 		MiultiCons mc2 = new MiultiCons(55,66);
 		mc2.printVal();
 	}
-
 }
