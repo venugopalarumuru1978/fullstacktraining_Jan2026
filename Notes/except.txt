@@ -1,0 +1,58 @@
+Exception Handling:- 
+-------------------
+Error Handling in Prog Lang
+
+	Basically errors are 3 types
+
+		1. Compile Time
+				these errors are generally coding mistakes				
+		2. Run Time
+				these errors occurs at the time of program execution. 
+					why it occur
+						1. Invalid Inputs
+						2. Invalid Operations
+
+Exception :-  It is an abnormal situtation where it raise a runtime error. The process of handling run time errors is called Exception handling.
+
+try,  catch, finally, throws, throw keywords are used to handle exceptions.
+
+try:-  this block is used to write actual program allows to detect an exception and will send it to catch block
+
+catch :-  this block allows to perform alternative action when try block detects an exception. 
+
+finally :-   this block must be executed irrespective of the exception. 
+
+try
+{
+	actual program
+}
+catch(ExceptionName obj)
+{
+	alternative code
+}
+finally
+{
+	code must be execute
+}
+"Exception" is a parent class and is used to handle any type of exception. But Every exception has it's own exception class, those all classes are child classes of Exception Parent class. 
+
+exceptions are classified into 3 types
+1.  Unchecked Exceptions :-  these exceptions are not identifed by complier at the time of coding or compilation.
+			to handle these exceptions, try - catch blocks are used. 
+2.  Checked Exceptions	:-  these exceptions are identified by compiler at the time of coding/compilation. 
+				to handle these exception, throws keyword is used. 
+
+		void methodname() throws ExceptionName
+		{
+			.....
+		}
+
+3.  User Defined Exceptions :-  the exceptions created and managed by user. 
+					to raise an exception "throw" keyword is used. 
+
+
+
+
+
+
+
