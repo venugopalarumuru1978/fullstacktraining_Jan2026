@@ -1,0 +1,25 @@
+package ListPack;
+import java.util.*;
+
+public class LList1 {
+
+	public static void main(String[] args) {
+		List<String>  strList = new LinkedList<String>();
+		strList.add("Nagini");
+		strList.add("NagaRaju");
+		strList.add("Naga Mani");
+		strList.add("Nageswar");
+		strList.add("Nagini");
+		strList.add("Nagarjuna");
+		
+		System.out.println(strList);
+		System.out.println("------------");
+		for(String str : strList)
+			System.out.println(str);
+		System.out.println("------------");
+		Iterator  itr = strList.iterator();
+		while(itr.hasNext())
+			System.out.println(itr.next());
+	}
+
+}
