@@ -7,7 +7,7 @@ public class VectorEx {
 		List<String>  strList = new Vector<String>();
 		strList.add("Nagini");
 		strList.add("NagaRaju");
-		strList.add("Naga Mani");
+		strList.add("NagaMani");
 		strList.add("Nageswar");
 		strList.add("Nagini");
 		strList.add("Nagarjuna");
@@ -21,5 +21,4 @@ public class VectorEx {
 		while(itr.hasNext())
 			System.out.println(itr.next());
 	}
-
 }

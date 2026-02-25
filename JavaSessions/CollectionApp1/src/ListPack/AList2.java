@@ -21,5 +21,4 @@ public class AList2 {
 		while(itr.hasNext())
 			System.out.println(itr.next());
 	}
-
 }
