@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 	<class name="coms.testpack.Student" table="std_info_test">  
+    <id name="rollno"> <!-- Primary key -->  
+     	<generator class="assigned"></generator>  
+    </id>
+    
+    <property name="sname" column="std_name"/>  
+    <property name="course" />
+    <property name="fees" />  
+  </class>
+</hibernate-mapping>
