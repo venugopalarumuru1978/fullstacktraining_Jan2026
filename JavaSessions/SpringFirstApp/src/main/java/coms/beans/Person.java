@@ -8,6 +8,7 @@ public class Person {
 	public String getPname() {
 		return pname;
 	}
+	
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
@@ -24,6 +25,4 @@ public class Person {
 		this.email = email;
 		System.out.println("Constructor");
 	}
-	
-	
 }
