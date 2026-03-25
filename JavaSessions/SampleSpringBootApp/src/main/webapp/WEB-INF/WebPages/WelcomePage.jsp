@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="SiteLinks.jsp"/>
+<h1 style="text-align:center">
+Welcome to Admin &nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="login">Logout</a>
+</h1>
 <hr />
-<h1>Test page</h1>
-<h2>X val ${xVal} </h2>
-<h2>Y val ${yVal} </h2>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="SiteLinks.jsp"/>
+<hr />
 <h1>This is Home Page</h1>
+<h2>Message : ${msg }</h2>
 </body>
 </html>
