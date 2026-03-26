@@ -21,8 +21,7 @@ public class PersonController {
 
 	@PostMapping("/pinfoProcess")
 	public String personPage(@ModelAttribute("perObj") Person pObj, Model m)
-	{
-		
+	{		
 		System.out.println("Person name : " + pObj.getPname());
 		System.out.println("Person Gender : " + pObj.getGender());
 		System.out.println("Person Location : " + pObj.getLocation());
@@ -30,5 +29,4 @@ public class PersonController {
 		m.addAttribute("perObj", perObj);
 		return "PersonReg";
 	}
-	
 }
