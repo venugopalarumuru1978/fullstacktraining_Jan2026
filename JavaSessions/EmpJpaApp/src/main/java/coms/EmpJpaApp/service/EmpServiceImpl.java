@@ -34,4 +34,16 @@ public class EmpServiceImpl implements EmpService {
 			return em.get(); // return emp  class obj
 		return null;
 	}
+
+	@Override
+	public void DeleteEmp(int eid) {
+		// TODO Auto-generated method stub
+		er.deleteById(eid);
+	}
+
+	@Override
+	public void UpdateEmp(Employee emp) {
+		// TODO Auto-generated method stub
+		er.saveAndFlush(emp);  
+	}
 }

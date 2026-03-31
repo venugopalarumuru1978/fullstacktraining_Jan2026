@@ -8,12 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 style="text-align:center">Employee Register Form</h1>
+<h1 style="text-align:center">Employee Update Form</h1>
 <hr />
-<jsp:include page="Links.jsp"/>
+<h2 style="text-align:center">
+<a href="../viewall">Back</a>
+</h2>
 <hr />
-<frm:form method="POST"  action="newemp_add"  modelAttribute="empObj">
+<frm:form method="POST"  action="../modemp_upt"  modelAttribute="empObj">
 <p style="text-align:center">
+<label>Employee Id </label><br />
+<frm:input type="text"  path="eid"  placeholder ="Employee Name" />
+<br /><br />
 <label>Employee Name </label><br />
 <frm:input type="text"  path="ename"  placeholder ="Employee Name" />
 <br /><br /><label>Employee Job </label><br />
@@ -31,7 +36,7 @@
 <br /><br /><label>Email Password </label><br />
 <frm:input type="text"  path="pswd"  placeholder ="Password" />
 <br /><br />
-<input type="submit"  value="Register" />
+<input type="submit"  value="Update Emp" />
 </p>
 </frm:form>
 </body>
