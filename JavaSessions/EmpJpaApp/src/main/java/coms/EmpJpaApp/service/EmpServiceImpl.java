@@ -46,4 +46,13 @@ public class EmpServiceImpl implements EmpService {
 		// TODO Auto-generated method stub
 		er.saveAndFlush(emp);  
 	}
+
+	@Override
+	public Employee UserCheck(String user, String pwd) {
+		Employee  emp = er.EmpCheck(user, pwd);
+		if(emp!=null)
+			return emp;
+		
+		return null;
+	}
 }

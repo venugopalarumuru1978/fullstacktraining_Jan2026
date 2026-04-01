@@ -10,7 +10,8 @@
 <p style="text-align:center">
 	<a href="newemp">New Employee</a> &nbsp;&nbsp;|&nbsp;&nbsp;
 	<a href="viewall">All Employees</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="search">Search Employee</a>
+	<a href="search">Search Employee</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="login">Logout</a>
 </p>
 </body>
 </html>
