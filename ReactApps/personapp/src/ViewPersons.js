@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ViewPersons()
 {
     const [pinfo, setPinfo] = useState([]);
-
+    const [cnt, setCnt] = useState(0);
+    const navigate = useNavigate();
     useEffect(()=>{
         axios.get('http://localhost:9087/person')
             .then(
@@ -12,8 +14,20 @@ function ViewPersons()
                     setPinfo(response.data);
                     console.log(response.data);
                 })
-        },[]);
-    
+        },[cnt]);
+
+        const delPerson =(pid)=>{
+            axios.delete('http://localhost:9087/person/' + pid)
+            .then(response =>{
+                console.log(response.data);
+                setCnt(cnt+1);
+            });
+        }
+
+        const GetPerson= (pid) =>{
+            navigate("/updatePerson/" + pid);
+        }
+
     return(
         <div>
         <div className="row">
@@ -28,7 +42,8 @@ function ViewPersons()
                                     <th>Person ID</th>
                                     <th>Person Name</th>
                                     <th>Person Email</th>
-                                    <th>Person Phone</th>                                    
+                                    <th>Person Phone</th>
+                                    <th>Operations</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -39,6 +54,11 @@ function ViewPersons()
                             <td>{p.pname}</td>
                             <td>{p.email}</td>
                             <td>{p.phone}</td>
+                            <td>
+                                <input type="button" value="Delete" className="btn btn-danger" onClick={()=>{delPerson(p.pid)}} />
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="button" value="Modify" className="btn btn-warning" onClick={()=>{GetPerson(p.pid)}} />
+                            </td>
                         </tr>
                     ))
                 }

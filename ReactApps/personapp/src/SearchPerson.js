@@ -32,11 +32,18 @@ function SearchPerson()
             <div className="row">
             <div className="col-md-3"></div>
                 <div className="col-md-6">
-                    <label>Person ID</label>
+                    <div className="row">
+                        <div className="col-md-8">
+                        <label>Person ID</label>
                     <input type="text"  name="pid" className="form-control"
                     onChange={(e)=>{setPid(e.target.value)}}/>
+                        </div>
+                        <div className="col-md-4">
+                            <br />
+                        <input type="button"  value="Search Emp"  className="btn btn-success" onClick={getPersonInfo} />
+                        </div>
+                    </div>
                     
-                    <input type="button"  value="Search Emp"  className="btn btn-success" onClick={getPersonInfo} />
 
                     <br />
                     <br />

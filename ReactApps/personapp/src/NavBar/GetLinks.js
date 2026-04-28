@@ -3,6 +3,7 @@ import ViewPersons from "../ViewPersons";
 import AddPerson from "../AddPerson";
 import Links from "./Links";
 import SearchPerson from "../SearchPerson";
+import ModifyPerson from "../ModifyPerson";
 
 function GetLinks()
 {
@@ -18,7 +19,8 @@ function GetLinks()
             <Route path="/" exact Component={ViewPersons} />
             <Route path="/addperson" exact Component={AddPerson} />
             <Route path="/viewall" exact Component={ViewPersons} />
-            <Route path="/search" exact Component={SearchPerson} />            
+            <Route path="/search" exact Component={SearchPerson} />
+            <Route path="/updatePerson/:pid"  exact Component={ModifyPerson} />          
           </Routes>
           </BrowserRouter>
               </div>
