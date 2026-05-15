@@ -1,0 +1,159 @@
+Phase Content
+--------------
+AWS
+JENKINS
+DOCKER
+--------------
+For an application creation, there are 3 steps
+1.  Development
+2.  Testing
+3.  Deployment
+--------------
+Today's Agenda
+--------------
+What is Cloud
+What is an AWS
+EC2 Instance
+--------------
+What is a Cloud?
+
+Cloud Computing is the delivery of the computing services, the services are like
+
+Servers - Computers
+Storage
+Databases
+Networking
+Software
+Analytics and so on
+--------------------------
+Who are providing cloud services
+1. AWS - Amazon Web Service
+2. MS - Azure (Microsoft)
+3. IBM Cloud
+4. Google Cloud
+
+While Purchasing any computer,
+  Hardware
+	Processor Type and Speed
+	RAM Capacity
+	Disk Capacity
+	Graphic Card
+	.......
+  Software
+         OS ->  Windows/Linux/Mac/....
+	 Tools -> Java,MySQL,....
+--------------------
+Cloud Computing having different categories
+
+1. Public Cloud
+2. Private Cloud
+3. Hybrid Cloud
+
+Public Cloud: -
+Based Standard Cloud Computing 
+
+A public cloud provides application storage and offers various types of servies over the internet
+
+Databases
+Networks
+Operating Systems
+Softwares
+....
+Various Public Clouds
+1. Microsoft Azure
+2. Amazon Web Services
+3. Google Cloud Platform
+4. IBM Cloud
+
+Private Cloud :- 
+This one offers exclusive services for a single enterprize or organization
+
+This provides great benefits to the user in terms of the privacy information.
+
+Hybrid Cloud :- 
+It is a combination o fOn-Premise and public Cloud
+
+
+Cloud Computing Models
+
+There are 3 Models in Cloud
+
+1.  Infrastructure as a Service(IaaS)
+	It is also called as Lowest Level Cloud Service. 
+	It is designed to provide hardware resources to the users using a vitural interface. 
+	It is easy to use since it does not come with pre-installed applications or even an operating 		system. This makes it a hugely popular chocie among business owners.
+
+2.  Platform as a Service(PaaS)
+	This type of services mainly used to design and deliver the cloud platform to it's users. 
+	
+3.  Software as a Service(SaaS)
+
+	Software as a Service  licensing and delivery model that develops and delivers a fully 	functioning software to the users over the web. 
+
+Feature of the Cloude Computing
+
+1.  Resource Pooling
+2.  On-Demand Self-Service
+3.  Easy Maintance
+4.  Large Network Access
+5.  Availabity
+6.  Automatic System
+7.  Economical
+8.  Security
+9.  Pay as You Go
+10.  Measured Service
+------------------------------------
+AWS :-  Here AWS is one of the popular cloud platform which provides cloud services to their clients.
+AWS  has the  most extensive global cloud infrastrcutre, no other cloud provides these many regions. 
+AWS having 99 Availbility Zones within 31 geographic regions around the world. 
+
+What is meant by EC2?
+	EC2 full form is :  Elastic Compute Cloud(EC2)
+
+It is one of the WebService that provides resizable compute capacity in the cloud. 
+It is designed to make web-scale computing easier for the developers. 
+
+In General EC2 is one of the server to create machine with an Operating System. 
+
+Once we login in machine, first update system with following command
+	sudo yum update
+ 
+Some Linux Commands
+
+1. ls :- shows all the content within working folder/directory. 
+2. pwd :- Present Working Directory :- show current working location. 
+3. clear :- clears screen
+4. exit :-  disconnect from the server.
+5. sudo yum update :-  it will update server.
+6. mkdir  <foldername> :-  to create a folder
+7. cd <foldername> :-  to enter into that folder
+8. cd .. :-  to comeout from that folder
+9. vi <filename> :-  to create a new file
+10. cat <filename> :- to view content from the file
+-----------------------
+Steps to work with VI Command
+-----------------------------
+1. vi FileName
+2. It Opens an editor, then Type "Shift+I"
+3. Now type the required content
+4. Click on "Esc" button
+5. Type :wq then press enter key to comeout of editor
+--------------------------------
+Installing and Configuring Local Web Server:-
+--------------------------------
+to install local server/ web server
+	sudo yum install httpd
+to enable web server(by default disable)
+	sudo systemctl enable --now httpd
+to check status of the server 
+	sudo systemctl status httpd
+
+Once server is installed and enabled, open browser then type public IP of the ec2
+it will shows default web page.
+
+To load some other page in location
+first change following folder
+	cd /var/www/html/
+now create index.html page in that folder then write code as per the required
+	sudo vi  index.html
+once it is saved the refresh browser.

@@ -1,0 +1,130 @@
+Today's Agenda:-
+---------------------
+1.  Creating Tomcat Apache Server
+2.  Deploying Web Application in Tomcat Server
+3.  Creating Server for MySQL
+4.  Connecting to MySQL
+----------------------
+Steps to create tomcat web server:-
+
+1. Create one EC2 Instance
+2. Connect to that instance with ssh client
+3. Goto browser, then open tomcat server url, then copy the url of the tomcat server with version
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.79/bin/apache-tomcat-9.0.79.tar.gz
+4. Come back to SSH Client machine(command prompt), then download that file with following command
+	wget :- this command is used to download any file
+	wget  <tomcatURL>
+5. Once it is downloaded, unzip it with following command, here unzip means installing
+		tar  xvzf  <Tomcat Folder Name>
+6. Here to work with tomcat server, system should have "java". if java not exist, server won't starts
+	use following command to install java
+		sudo yum install java -y
+7. Now to test server, we need to start, use following commands
+		cd  apache...Foldername
+		cd bin
+		sh startup.sh
+	to stop server
+		sh shutdown.sh
+8.  Goto context.xml file from the META-INF folder
+		cd  apache...Foldername
+		cd  webapps/manager/META-INF
+		sudo  vi  context.xml
+
+		now modify "allow" option as follows
+			<allow=".*" />
+		then save and quit
+9.  Provide user details, goto "conf" folder, then modify  tomcat-users.xml file
+			cd apach...Foldername
+			cd conf
+			sudo  vi tomcat-users.xml
+
+	now add following code at the end of the file
+
+	<role rolename="manager-gui"/>
+ 	<role rolename="manager-script"/>
+ 	<role rolename="manager-jmx"/>
+ 	<role rolename="manager-status"/>
+ 	<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, 		manager-status"/>
+ 	<user username="deployer" password="deployer" roles="manager-script"/>
+ 	<user username="tomcat" password="s3cret" roles="manager-gui"/>
+		
+	Now save and quit
+
+Note :-  If we do any changes in server, the server need to stop and start
+
+10.  Now goto browser, then refresh then click on any link, it will ask  user details 
+		provide username/password "admin" and "admin"
+	it will open tomcat server dash board
+ 	
+Note :-  if we want to change port no
+		cd  apache...Foldername
+		cd conf
+		sudo  vi server.xml
+		
+		chnage port number in following tag
+		<Connector  port="8090" .... />
+----------------------
+As per java there are 3 types of output files exist
+
+1. jar files
+2. ear files
+3. war files  :-  these are the output files of web application. 
+
+Deploying Web Application into Tomcat Server
+
+1.  Open Eclipse then create one web application
+2. Code it as per the requirement, then create 'war' file as follows
+	rightClick on Project - Export- war file - specify the location
+3.  Open Tomcat  using AWS instance and goto dashboard
+	War file to deploy Section
+		Click on "Choose File" Button - browse file - then click Deploy button
+4. If it is deployed successfully, it visible on dashboard section
+--------------------------------
+if the application is Maven Application, then to create war file, 
+	Right Click on App -> Run As -> Maven Build
+
+this process will create a war file. 
+--------------------------------
+How to install  mysql in the server:-
+
+Create one EC2 Instance using AWS(Take Ubuntu Images
+Step 1: Update the system
+sudo apt update
+
+Step 2: Install MySql
+sudo apt install mysql-server
+
+Step 3: Check the Status of MySql (Active or Inactive)
+sudo systemctl status mysql
+
+Step 4: Login to MySql as a root
+sudo mysql
+
+Step 5: Update the password for the MySql Server
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'place-your-password-here';
+
+FLUSH PRIVILEGES;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'venu1234';
+Step 6: Test the MySql server if it is working by running sample sql queries
+CREATE DATABASE mysql_test;
+
+USE mysql_test;
+
+CREATE TABLE table1 (id INT, name VARCHAR(45));
+
+INSERT INTO table1 VALUES(1, 'Virat'), (2, 'Sachin'), (3, 'Dhoni'), (4, 'ABD');
+
+SELECT * FROM table1;
+Step 7 : Connect to mysql with user details
+
+mysql -u root -p
+---------
+To Connect MySQL to MySQL Workbench of Local system.
+
+a.  Define 3306 port no, in In-Bound Rules of Security Group of EC2 Instance
+
+------------------
+Linux different flavors are exist
+1.  Red Hat
+2.  Ubuntu

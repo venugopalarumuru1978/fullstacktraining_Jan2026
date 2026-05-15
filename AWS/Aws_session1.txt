@@ -1,0 +1,46 @@
+Today's Agenda
+--------------
+Linux Commands
+--------------
+Once we login in machine, first update system with following command
+	sudo yum update
+
+Some Linux Commands
+1. ls :- shows all the content within working folder/directory. 
+2. pwd :- Present Working Directory :- show current working location. 
+3. clear :- clears screen
+4. exit :-  disconnect from the server.
+5. sudo yum update :-  it will update server.
+6. mkdir <foldername> :-  to create a folder
+7. cd <foldername> :-  to enter into that folder
+8. cd .. :-  to comeout from that folder
+9. vi <filename> :-  to create a new file
+10. cat <filename> :- to view content from the file
+-----------------------
+Steps to work with VI Command
+-----------------------------
+1. vi FileName
+2. It Opens an editor, then Type "Shift+I"
+3. Now type the required content
+4. Click on "Esc" button
+5. Type :wq then press enter key to comeout of editor
+--------------------------------
+Installing and Configuring Local Web Server:-
+--------------------------------
+to install local server/ web server
+	sudo yum install httpd
+to enable web server(by default disable)
+	sudo systemctl enable --now httpd
+to check status of the server 
+	sudo systemctl status httpd
+
+Once server is installed and enabled, open browser then type public IP of the ec2
+it will shows default web page.
+
+To load some other page in location
+first change following folder
+	cd /var/www/html/
+now create index.html page in that folder then write code as per the required
+	sudo vi  index.html
+once it is saved the refresh browser.
+--------------------
