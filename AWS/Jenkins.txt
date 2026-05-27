@@ -1,0 +1,162 @@
+Today's Agenda
+--------------
+How to Install Jenkins
+How to Deploy WebApplication in Jenkins
+--------------
+What is meant by Jenkins?
+
+Jenkins is a free, open-source tool that helps developers automate the process of building, testing and deploying code. 
+
+It is written in Java and runs on the Java platform. If you want to install Jenkins in your system it is mandatory to install Java first in your system then install jenkins. 
+
+By using Jenkins, we can make a continuous integration of projects(jobs) or end-to-end point automation.
+
+Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
+
+What is a CI/CD Pipeline. Jenkins Pipeline? 
+Jenkins Pipeline (or simply "Pipeline") is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins. A continuous delivery pipeline is an automated expression of your process for getting software from version control(GIT) right through to your users and customers.
+--------------------------
+Project :- 
+        Development
+               Code  (GitHub)
+               Maven Build Tool
+	Deployment :-
+		Web Server (Tomcat Server / IIS / GlassFish / WebLogic/ ....)
+
+Jenkins need java to work. It must be java versions like java 11/17/21
+
+		triconapp
+		t@123
+----------
+Jenkins Installation on Ubuntu Machine
+---------------------------------------
+1. Create an Ubuntu EC2 Console Instance
+
+2. Update the system
+	sudo apt update
+
+3. Install Java 11 version
+	sudo apt install default-jre  // it installs java 11 version
+	sudo apt install openjdk-21-jre
+4. Open this url and execute given commands
+	https://pkg.jenkins.io/debian/
+
+5. Again update system
+
+6.  install jenkins
+	sudo apt install jenkins
+
+7.  check status of the jenkins
+	sudo systemctl status jenkins
+
+8. now goto ec2 instance copy public url
+	http://publicurl:8080/              http://35.154.235.246:8080/
+
+Note :- Getting Admin Password
+	  first give persmissions on following folder
+		sudo chmod -R 777 /var/lib/jenkins/secrets
+
+		cat  initialAdminPassword
+
+		it shows admin password, copy that code paste it on web browser password area.
+----------------------------------
+Steps to Create and Push Code into Github from Eclipse:- 
+
+1.  Create a web app using Eclipse
+
+2.  Create a repo in github with application name
+
+3.  Open gitbash tool use following command to push code into github(be in application folder).
+		git init
+
+		git add .
+
+		git status
+
+		git commit -m "msg"
+
+		git remote add origin  "repository url"
+
+		git push -u origin  <branch name>  Note :- if it gets error then use following cmd
+
+		git pull --rebase origin <branch>
+
+		now use push command
+
+4.  Open jenkins app using browser with sepcified url
+
+		http://IP4V public url :8080
+
+5.  Click on NewItem then create jenkins project. 
+
+6.  On Jenkins Dashboard,  Click on "Manage Jenkins" -  Tools -  Maven Installations - specify version of Maven  - Apply and Save button. 
+
+7.  Now goto Dashboard - Click on Project - Click Configure Option
+		Description is Any text
+
+	a.  Select "git" option from "Source Code Management"
+		Specify Repo URL of Project,  specify username and password of git account as well as
+		branch name .
+
+	b. In Build Enviornment - select "Delete Workspace" Option
+
+	c. Dashboard - Manage Jenkins - Tools - Maven Installations -  Provide Name and Version of Maven - Save 						Button
+	d.  Build Steps
+		Select "Invoke top-level maven targets
+			Select Maven Option which is already earlier
+				In Goals Section "clean package" command specify it
+
+	Now use Apply and Save Buttons. 
+
+8.    Dashboard - Manage Jenkins -  Plugins - Avaialble Plugins - search - "deploy to container" 
+			option - click on Install button 
+
+9.   Dashboard - Click on Project - Configure - goto "post build options" - select an item
+ 			"Deploy war/ear to a container opition
+				WAR/EAR files : target/*.war
+
+			In Container Section :- Select Tomcat Server
+				Specify tomcat username and password
+				Specify tomcat url(get it from ec2 instance tomcat server)
+Now use Apply and Close Buttons.
+
+10.  Now goto Dashboard click Build Option to deply. if it success, automatically war is deplyed on tomcat server. 
+
+11. Goto tomcat server, check the deployment. 
+
+Note :-  Github code should available and tomcat server must be started
+-------------------------
+
+pipeline {
+    agent any
+    tools{
+        maven 'Maven Software'
+    }
+    stages {
+        stage('Code from Git') {
+            steps {
+                git credentialsId: 'git_account', url: 'https://github.com/venugopalarumuru1978/JenkinsWebDeployApp.git'
+            }
+        }
+        
+        stage('Maven Installation') {
+            steps {
+                sh 'mvn clean install'                
+            }
+        }
+        
+        stage('Deployment with Tomcat Server') {
+            steps {
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'TomcatServer', path: '', url: 'http://43.204.97.88:8080')], contextPath: null, war: 'target/*.war'
+            }
+        }
+    }
+}
+--------------------
+1.	Application should be ready
+	it should be GitHub Repo
+2.      Create a project in Jenkins
+3. 	Get Code from GitHub
+4.      Create a tomcat server(EC2 Machine)
+5.      Configure tomcat  in jenkin project
+6.      Run Jenkin Project
