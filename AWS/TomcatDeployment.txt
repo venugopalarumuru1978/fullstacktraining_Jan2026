@@ -8,7 +8,7 @@ Steps to create tomcat web server:-
 1. Create one EC2 Instance
 2. Connect to that instance with ssh client
 3. Goto browser, then open tomcat server url, then copy the url of the tomcat server with version
-https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.79/bin/apache-tomcat-9.0.79.tar.gz
+https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.55/bin/apache-tomcat-10.1.55.tar.gz
 4. Come back to SSH Client machine(command prompt), then download that file with following command
 	wget :- this command is used to download any file
 	wget  <tomcatURL>
