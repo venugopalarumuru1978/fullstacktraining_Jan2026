@@ -1,0 +1,291 @@
+Today's Agenda
+---------------
+Docker
+---------------
+What is a Virtual Machine(VM)?
+The easiest way to think of a virtual machine (VM) would be as a computer within a computer. 
+
+Why we use VM's
+Virtualization software can save costs, depending on how your server’s resources are allocated.
+imagine you have a dedicated (or, a dedicated bare metal server) physical computer but you’re only using a fraction of the resources for your main applications. With a VM architecture, you could divide one bare metal server into multiple servers and thus save costs over the long term. 
+
+This approach not only optimizes resource utilization but also presents a cost-saving advantage over the long term. However, it’s important to weigh the pros and cons of using bare metal servers in this context, considering factors like performance, security, and scalability for your specific needs.
+
+Limitations:-
+1. Performance issues will be occured due to lack memory.
+
+Whenever we create VM? it utilizes all the resources of the computer, 
+1.  Hardware
+2.  Operating System
+3.  Software Tools
+------------------
+What is a Docker?
+
+Docker is a set of Platform as a service (PaaS) products that use Operating system-level virtualization to deliver software in packages called containers. 
+
+Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels.
+ 
+All containers are run by a single operating system kernel and therefore use fewer resources than a virtual machine.
+
+VMs have the host OS and guest OS inside each VM. A guest OS can be any OS, like Linux or Windows, irrespective of the host OS. In contrast, Docker containers host on a single physical server with a host OS, which shares among them. Sharing the host OS between containers makes them light and increases the boot time. Docker containers are considered suitable to run multiple applications over a single OS kernel; whereas, virtual machines are needed if the applications or services required to run on different OS.
+-----
+Docker Installation on Ubuntu Machine
+--------------
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+---------------
+To provide permission to the Docker daemon socket in Ubuntu, you can: 
+Create the Docker group if it doesn't exist:
+	sudo groupadd docker
+Add your user to the Docker group:
+	sudo usermod -aG docker ${USER}
+Change the permissions of the Docker daemon socket:
+	sudo chmod 666 /var/run/docker.sock
+Restart the Docker daemon service:
+	sudo systemctl restart docker
+---------------
+Docker Image:-
+A Docker image is a file used to execute code in a Docker container.
+Docker images act as a set of instructions to build a Docker container, like a template. 
+Docker images also act as the starting point when using Docker.
+
+Docker Image for java program:-
+General Instratutions
+1.  Get the Java Software (JDK)
+2.  Specify Java Code file
+3.  Compile java Code
+4.  Run java Code
+
+these all are specified in a file called as Image, It has another outer later for this called as Container. 
+if we execute either image/container, all the instructions in that speicifed will be executed. 
+
+Docker container:-
+A container is an isolated environment for your code. 
+This means that a container has no knowledge of your operating system, or your files. 
+It runs on the environment provided to you by Docker Desktop. Containers have everything that your code needs in order to run, down to a base operating system.
+
+Need know docker hub:-  it is a cloud platform for docker images, where it provides pre-complied images for different softwares like OS(windows/Linux/MacOS), Databases(MySQL/Oracle/...) and other tools.
+these Image files we can download from docker hub by using "docker pull" command and can use it. As well as we can push our Docker Images into docker hub. For that we need  docker hub account.
+--------------------
+docker --version  
+
+docker login
+
+docker images
+
+docker ps :- shows only running containers
+docker ps -a:- shows all containers
+
+docker create <Imagename>  :- to create container with random name
+
+docker create --name  <container_name>  <Image name>
+	to create container with specific name
+docker start <container name>
+docker stop <container Name>
+
+docker run --name <container name>  <image name>
+create and starts the container.
+
+docker run -d --name <container name>  <image name>
+Deattached mode
+
+docker build -t <ImageName:tagName>  <location>
+
+docker rmi imagename:version  => to delete  an image
+docker rm <container name>  =>  to delete a container
+
+Note : to delete an Image first we have to delete all it's related containers. 
+-------------------------------------------------
+Once container is created manually, follow below given to work on it. 
+
+Step 1 :-  create a container with specific name
+	docker create --name  <container_name>  <Image name>
+Step 2 :-  start the container
+	docker start <container name>
+Step 3 :-  execute container
+	docker run <container name>
+Step 4 :-  Stop the container
+	docker stop <container Name>
+
+Above specified all the opertions can be done with one command. 
+	docker run --name <container name>  <image name>
+------------------------------------
+Deleting a container :-  
+Following command is used to delete a container
+	docker rm <container name>
+Note :-  Cotainer cannot be deleted directly, first we have to delete it's associated image.
+How to delete an Image
+	docker rmi <image name>
+------------------------------------
+How to see/show all the images in docker system
+=> docker images
+
+How to get an image of particular software from docker hub
+=> docker pull imagename
+
+How to run an image
+=> docker run imagename
+
+Whenever we run an image, that image will not executed without container, first it will create one container then with the help of that container image execution will be done. 
+
+=> How to show all the containers which are running
+	docker ps
+
+=> How to show all the containers which are running as well as not running
+	docker ps -a
+
+=> How to create a container
+	docker create <image name>  
+		it will create container with random name.
+
+	docker create --name  <container name>  <image name>
+		it will create container with specific name.
+
+Once container is created, we have to follow below given steps
+
+	a. Start the container
+		docker start  <continer name>
+	b. Run the container 
+		docker run <continer name>
+	c. Stop the container
+		docker stop <container name>
+------------------------------------
+What is a Dockerfile:-
+It is a file which consist collection of docker image creation attributes.
+Each attribute having it's own action. 
+
+By using Dockerfile we can build / create an Docker images for the application.
+Dockerfile is not having any type of extension. 
+
+the dockerfile name must be "Dockerfile", here "D" should be capital
+
+1.  Get the Java Software (JDK)
+2.  Specify Java Code file
+3.  Compile java Code
+4.  Run java Code
+
+Attributes
+FROM:- defines the base image used to start the build process.
+
+ADD:- copies the files from a source on the host into the container's own filesystem at the set destination
+		it allows to copy files from local system as well as outside of the system.
+
+COPY:-  copies the files from source on the host into the container's own file system at the set destination
+		it allows to copy files from local system only.
+
+CMD:- can be used for executing a specific command within the container.
+
+ENTRYPOINT:-  sets a default application to be used everytime a container is created with the image.
+
+ENV:- sets enviornment variables
+
+EXPOSE:-  associates a specific port to enable networking between the container and to the outside.
+
+MAINTAINER:-  defines a full name and email address of the image creator.
+
+RUN:-  is the central executing directive for Dockerfiles.
+
+USER:- sets the UID / Username whcih is to run the container.
+
+VOLUME:- is used to enable access from the container to a directory on the host machine. 
+
+WORKDIR:- sets the path where the command, defined with CMD is to be executed
+
+LABEL:- allows you to add a label to your docker image.
+-------------------------
+Step 1 :-  create a java program 
+
+class  TestClass
+{
+public static void main(String[] args)
+{
+	System.out.println("Hello");
+}
+}
+
+Step 2:-  Create a Dockerfile then add the following code
+docker pull openjdk:26-ea-trixie
+
+FROM openjdk:8
+COPY . /myTest
+WORKDIR /myTest
+RUN javac TestClass.java
+CMD ["java", "TestClass"]
+
+Step 3 :- Now create an image by using docker file
+		docker build -t  imagename:tagname location
+		
+		docker  build -t  testimage:1.0  .
+
+Step 4:-  Once Image is created, that can be executed with following command
+		docker run imagename:tagname
+		docker run testimage:1.0
+------------------------------------
+Example 2:- 
+docker pull python:3.10.19-slim-trixie
+Step 1:-  Create a Java Maven Project and create a simple java application.
+
+Step 2:-  Goto pom.xml then add following config code
+	<build>
+	  <plugins>
+    <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>com.listpack.assignment.PhoneBookMain(your program pacakge with classname)</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+	  <finalName>PhoneBookApp(jar filename)</finalName>
+  </build>
+
+Step 3 :-  Now create a jar file by folowing step
+
+			Right Click On Application -> Run -  Maven Install
+
+Step 4 :-  Now create a docker file in application then write following code
+		FROM openjdk:8
+		ADD target/PhoneBookApp.jar PhoneBookApp.jar
+		ENTRYPOINT ["java","-jar", "/PhoneBookApp.jar"]
+Step 5 :-  Now create an image with the help docker then run the image using docker.
+
+------------------------------------
+Example 3:-  Docker with SpringBoot Application(Service Creation and Execution)
+
+Step 1 :-  Create Spring Boot Application using Maven and Eclipse
+
+Step 2:-   Specify jar filename in pom.xml 
+		<build>
+			<finalName>jarFilename</finalname>
+		</build> 
+Step 3:-  Create a jar file for the application using maven build. 
+		Right Click On Application -> Run -  Maven Install
+	
+Step 4:-  Add Docker file then add the following code
+FROM openjdk:17
+EXPOSE 8080
+ADD target/SpringBootDockerImage.jar SpringBootDoc.jar
+ENTRYPOINT ["java","-jar", "/SpringBootDoc.jar"]
+
+Step 5:-  Create dockerimage with dockerfile
+		docker build -t springbootimg:1.2 .
+
+Step 6:-  Now create a container for the image, while creating container,we can specify port number
+		sudo docker run -p 9091:8080 -d --name spcon springbootimg:1.2
+
+Step 7:-  Open Browser,then test it with public ipaddress of ec2 instance with new portno
+		http://Public_IPAddress:9091/mappingurl
+
+Note :-  we can repeat container creation for multiple ports.
+
+Once container is created with run mode of different ports. we can stop and start containers whenever we need. 
+
+docker stop <container name>
+docker start <container name>
